@@ -1,2 +1,0 @@
-# dmlSPA
-angular SPA
