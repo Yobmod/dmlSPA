@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('blogList').
+angular.module('blogList').  //camelcase used as dashed in html
     component('blogList', {
         // template: "<div class=''><h1 class='new-class'>{{ title }}</h1><button ng-click='someClickTest()'>Click me!</button></div>",
         templateUrl: '/templates/blog-list.html',
@@ -11,10 +11,7 @@ angular.module('blogList').
                   {title: "Kontol", id: 3, description: "This is a book", publishDate: "2016-09-11"},
                    {title: "Tai Anjing", id: 4, description: "This is a book", publishDate: "2016-09-11"},
             ]
-
             $scope.items = blogItems;
-
-
             $scope.title = 'Hi there'
             $scope.clicks = 0
             $scope.someClickTest = function(){
@@ -25,15 +22,14 @@ angular.module('blogList').
         }
     });
 
-    // controller('BlogListController', function($scope){
-    //     console.log("hello")
-    //     $scope.title = 'Hi there'
-    //     $scope.clicks = 0
-    //     $scope.someClickTest = function(){
-    //         console.log("clicked")
-    //         $scope.clicks += 1
-    //         $scope.title = 'Clicked ' + $scope.clicks + ' times'
-    //     }
-    // });
-
-    // compontent('blogList');
+angular.module('blogList').
+    controller('blogListController', function($scope){
+        //console.log("hello")
+        $scope.title = 'Mooo '
+        $scope.clicks = 0
+        $scope.someClickTest = function(){
+            console.log("cow abuse")
+            $scope.clicks += 1
+            $scope.title = 'Mooo ' + ($scope.title.repeat($scope.clicks))
+        }
+    });
