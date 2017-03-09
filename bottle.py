@@ -18,7 +18,7 @@ def index():
 	#raise html('index.html')
 	#return '<b> This is page without a template</b>'
 
-@route('/blog/<number>')
+@route('/parp/<number>')
 def blogdetail(number):
 	return template('<h3>Routing provided by bottle for blog {{number}}</h3>!', number=number)
 
