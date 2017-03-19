@@ -3,7 +3,7 @@
 angular.module('blogList').  //camelcase used as dashed in html
     component('blogList', {
         // template: "<div class=''><h1 class='new-class'>{{ title }}</h1><button ng-click='someClickTest()'>Click me!</button></div>",
-        templateUrl: '/templates/blog-list.html',
+        templateUrl: 'static/partials/blog-list.html',
         controller: function($scope){
             var blogItems = [
                 {title: "Goblok", id: 1, description: "This is a book", publishDate: "2016-09-11"},

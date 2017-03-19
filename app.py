@@ -1,24 +1,22 @@
-from flask import Flask
+from flask import Flask, render_template
 
 
 app = Flask(__name__)
-#TEMPLATE_PATH.insert(0, './templates')
-#view = functools.partial(jinja2_view, template_lookup=['templates'])
 
-@app.route('/hello/<name>')   #127.0.0.1:8080/hello/dominic
+@app.route('/hello/<name>')
 def hello(name):
-	return template('<b>Hello {{name}}</b>!', name=name)
+	return render_template('<b>Hello {{name}}</b>!', name=name)
 
 @app.route('/')
 def index():
-	#return template('index.html')
+	return render_template('index.html')
 	#raise html('index.html')
-	return '<b> This is page without a template</b>'
+	#return '<b> This is page without a template</b>'
 
 @app.route('/parp/<number>')
 def blogdetail(number):
 	pass
-	#return template('<h3>Routing provided by bottle for blog {{number}}</h3>!', number=number)
+	#return template('<h3>Routing provided by flask for blog {{number}}</h3>!', number=number)
 
 # @app.route("/templates/<filepath:re:.*\.html>")
 # def html(filepath):
