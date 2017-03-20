@@ -13,6 +13,10 @@ def index():
 	#raise html('index.html')
 	#return '<b> This is page without a template</b>'
 
+@app.route('/contact')
+def contact():
+	return render_template('contact.html')
+
 @app.route('/parp/<number>')
 def blogdetail(number):
 	pass

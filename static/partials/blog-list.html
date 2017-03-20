@@ -2,7 +2,7 @@
 <ul ng-if='items.length > 0' class="bigblue">
 	<p>{{ items.length }} items listed below:</p>
     <li ng-repeat='item in items'>
-            <a ng-href='%23/blog/{{ item.id }}'>{{ item.title }} - {{ item.publishDate }}</a>
+            <a ng-href='/blog/{{ item.id }}'>{{ item.title }} - {{ item.publishDate }}</a>
     </li>
 </ul>
 

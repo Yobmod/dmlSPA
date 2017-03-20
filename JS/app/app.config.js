@@ -9,11 +9,10 @@ angular.module('dmlSPA').
 		$locationProvider.html5Mode({enabled:true})
 		$routeProvider
 		.when("/blog", {templateURl: 'index.html'})
-		.when("/blog/:id", {template: "<blog-list></blog-list>"})
+		.when("/blog/:id", {template: "<h3>post id</h3>"})
 		.when("/blog/:id/:abc", {template: "<h3>post 3</h3>"})
-
-		.when("/contact", {templateURl: 'contact.html'}) //contact page served by flask, should be own app?
-		.when("/contact/why", {template: "<h3>why o why</h3>"}) //otherwise all ngRoutes correspond to dmlSPA
+		.when("/blog/popp", {template: "<h3>post 4</h3>"})
+		.when("/contact", {template: 'templates/contact.html'})
 		.otherwise({ redirectTo: '/'})
 
 

@@ -28,11 +28,11 @@ def html(filepath):
 
 @get("/css/<filepath:re:.*\.css>")
 def css(filepath):
-	return static_file(filepath, root="./css")
+	return static_file(filepath, root="./static/css")
 
 @get("/js/<filepath:re:.*\.js>")
 def js(filepath):
-	return static_file(filepath, root="./js")
+	return static_file(filepath, root="./static/js")
 
 
 run(host='localhost', port=8080, reloader=True, debug=True)
