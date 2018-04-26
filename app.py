@@ -3,24 +3,28 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+
 @app.route('/hello/<name>')
 def hello(name):
-	return render_template('<b>Hello {{name}}</b>!', name=name)
+    return render_template('<b>Hello {{name}}</b>!', name=name)
+
 
 @app.route('/')
 def index():
-	return render_template('index.html')
-	#raise html('index.html')
-	#return '<b> This is page without a template</b>'
+    return render_template('index.html')
+    # raise html('index.html')
+    # return '<b> This is page without a template</b>'
+
 
 @app.route('/contact')
 def contact():
-	return render_template('contact.html')
+    return render_template('contact.html')
+
 
 @app.route('/parp/<number>')
 def blogdetail(number):
-	pass
-	#return template('<h3>Routing provided by flask for blog {{number}}</h3>!', number=number)
+    pass
+    # return template('<h3>Routing provided by flask for blog {{number}}</h3>!', number=number)
 
 # @app.route("/templates/<filepath:re:.*\.html>")
 # def html(filepath):
@@ -35,7 +39,7 @@ def blogdetail(number):
 # 	return static_file(filepath, root="./js")
 
 
-#run(host='localhost', port=8080, reloader=True, debug=True)
+# run(host='localhost', port=8080, reloader=True, debug=True)
 
 if __name__ == '__main__':
-	app.run()
+    app.run()
