@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .env
 
 .mypy_cache
@@ -105,3 +106,21 @@ ENV/
 
 # mypy
 .mypy_cache/
+=======
+/htmlcov
+/.cache
+/.mypy_cache
+*.idea
+*/build
+*/dist
+/build
+/dist
+
+*.pyc
+__pycache__
+myvenv
+local_settings.py
+db.sqlite3
+/static
+.DS_Store
+>>>>>>> 079aa61fb0b25887775110d342f9e32bbe2664fa

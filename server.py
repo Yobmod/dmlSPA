@@ -1,3 +1,22 @@
+"""."""
+from cheroot.wsgi import Server, PathInfoDispatcher
+from app import app
+
+address = '127.0.0.1', 5000
+dispatcher = PathInfoDispatcher({'/': app})
+server = Server(address, dispatcher)
+
+if __name__ == '__main__':
+    try:
+        print(f'* Cheroot server starting at {address} ...')
+        server.start()
+    except KeyboardInterrupt:
+        server.stop()
+        print('* Cheroot server stopped')
+    except Exception as e:
+        print(e)
+
+
 """
 import cherrypy
 from app import app
@@ -16,20 +35,3 @@ if __name__ == '__main__':
     cherrypy.engine.start()
     cherrypy.engine.block()
 """
-
-from cheroot.wsgi import Server, PathInfoDispatcher
-from app import app
-
-address = '127.0.0.1', 5000
-dispatcher = PathInfoDispatcher({'/': app})
-server = Server(address, dispatcher)
-
-if __name__ == '__main__':
-    try:
-        print(f'* Cheroot server starting at {address} ...')
-        server.start()
-    except KeyboardInterrupt:
-        server.stop()
-        print('* Cheroot server stopped')
-    except Exception as e:
-        print(e)
